@@ -57,6 +57,10 @@ hr {
     padding: 20px 80px;
     background: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0 , 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 #navbar{
     display: flex;
@@ -66,10 +70,63 @@ hr {
 #navbar li{
     list-style: none;
     padding: 0 20px;
+    position: relative;
 }
 #navbar li a{
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #1d1d1d;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+    color: #c2c81d;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #c2c81d ;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 6px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+/* Home page */
+#hero{
+  background-image: url("img/hero.png");
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#hero h4{
+  padding-bottom: 15px;
+}
+#hero h2{
+  color: red;
+}
+#hero button{
+  border-radius: 25px;
+  border-color: yellow;
+  background: yellow;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px   ;
 }
