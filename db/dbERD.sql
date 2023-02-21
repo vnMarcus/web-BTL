@@ -2,7 +2,6 @@ CREATE TABLE `user` (id bigint(19) NOT NULL AUTO_INCREMENT, user_name varchar(50
 CREATE TABLE Product (id bigint(19) NOT NULL AUTO_INCREMENT, product_name varchar(50) NOT NULL UNIQUE, price double NOT NULL, descriptions text NOT NULL, status int(10) NOT NULL, available int(10) NOT NULL, images text NOT NULL, quantity int(10) NOT NULL, Categoryid bigint(20) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Orders_detail (quantity int(11), price double, Productid bigint(19) NOT NULL, Ordersid bigint(19) NOT NULL, PRIMARY KEY (Productid, Ordersid));
 CREATE TABLE Category (id bigint(20) NOT NULL AUTO_INCREMENT, category_name varchar(30) NOT NULL, descriptions text, parent_category_id bigint(20) DEFAULT NULL, PRIMARY KEY (id));
-CREATE TABLE Orders_Product (Ordersid bigint(19) NOT NULL, Productid bigint(19) NOT NULL, quantity int(11) NOT NULL, price double NOT NULL, PRIMARY KEY (Ordersid, Productid));
 CREATE TABLE Orders (id bigint(19) NOT NULL AUTO_INCREMENT, user_id bigint(19) NOT NULL, order_time datetime NOT NULL, delivery_time datetime NOT NULL, status text, Address text, payment_id bigint(20) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Payment_method (id bigint(20) NOT NULL AUTO_INCREMENT, name varchar(20) NOT NULL, user_id bigint(19) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Cart (id bigint(20) NOT NULL AUTO_INCREMENT, user_id bigint(19) NOT NULL, PRIMARY KEY (id));

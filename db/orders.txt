@@ -1,0 +1,16 @@
+INSERT INTO `test_db`.`orders`
+(`id`,
+`user_id`,
+`order_time`,
+`delivery_time`,
+`status`,
+`Address`,
+`payment_id`)
+VALUES
+ (1,1, '2022-02-21 12:00:00', '2022-02-22 14:00:00', 'Pending', '123 Main St, Anytown USA', 1),
+    (2,2, '2022-02-20 09:00:00', '2022-02-22 10:00:00', 'Delivered', '456 Park Ave, Anytown USA', 2),
+    (3,1, '2022-02-18 15:00:00', '2022-02-19 16:00:00', 'Cancelled', '123 Main St, Anytown USA', 3),
+    (4,3, '2022-02-16 10:00:00', '2022-02-17 12:00:00', 'Delivered', '789 Elm St, Anytown USA', 1),
+    (5,2, '2022-02-15 08:00:00', '2022-02-16 09:00:00', 'Delivered', '456 Park Ave, Anytown USA', 2);
+
+

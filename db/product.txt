@@ -1,3 +1,4 @@
+
 INSERT INTO `test_db`.`product`
 (`id`,
 `product_name`,
@@ -7,7 +8,7 @@ INSERT INTO `test_db`.`product`
 `available`,
 `images`,
 `quantity`,
-`Category_id`)
+`Categoryid`)
 VALUES
 (1,'iPhone 13',1299.99,'The latest iPhone model from Apple',1,10,'https://example.com/iphone13.jpg',100,15),
 (2,'Samsung Galaxy S21',999.99,'The flagship smartphone from Samsung',1,15,'https://example.com/galaxyS21.jpg',50,15),

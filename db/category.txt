@@ -1,16 +1,11 @@
-INSERT INTO `test_db`.`product`
+INSERT INTO `test_db`.`category`
 (`id`,
-`product_name`,
-`price`,
+`category_name`,
 `descriptions`,
-`status`,
-`available`,
-`images`,
-`quantity`,
-`Categoryid`)
+`parent_category_id`)
 VALUES
-(1,'iPhone 13',1299.99,'The latest iPhone model from Apple',1,10,'https://example.com/iphone13.jpg',100,15),
-(2,'Samsung Galaxy S21',999.99,'The flagship smartphone from Samsung',1,15,'https://example.com/galaxyS21.jpg',50,15),
-(3,'MacBook Pro',1999.99,'Powerful laptop from Apple',1,5,'https://example.com/macbookPro.jpg',25,12),
-(4,'Sony Bravia',1499.99,'High-end TV from Sony',1,8,'https://example.com/sonyBravia.jpg',10,20),
-(5,'Bose QuietComfort 35 II',249.99,'Noise-cancelling headphones from Bose',1,20,'https://example.com/boseQC35II.jpg',20,23);
+(12,'Laptops','Portable computing devices',NULL),
+(15,'Smartphones','Mobile phones with advanced features',NULL),
+(20,'Televisions','Electronic devices used for displaying visual content',NULL),
+(23,'Speakers','Devices that convert electrical signals into sound',NULL),
+(27,'Cameras','Devices used for capturing images and video',NULL);
