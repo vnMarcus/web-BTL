@@ -56,8 +56,23 @@ hr {
   height: 2px;
   background-color: #d2bbb4;
 }
+button.normal{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: red;
+  background-color: #9e9693;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transform: 0.2;
+}
 .section-p1{
   padding: 40px 80px;
+}
+.section-m1{
+  margin: 40px 0;
 }
 #header{
     display: flex;
@@ -230,4 +245,36 @@ hr {
 #product1 .pro img{
   width: 100%;
   border-radius: 20px;
+}
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("img/banner/banner1.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner h4
+{
+  color: #ba1212;
+  font-size: 20px;
+
+}
+#banner h2{
+  color: #ba1212;
+  font-size: 40px;
+  padding: 10px 0;
+}
+#banner h2 span{
+  color: #eded0c;
+  font-size: 50px;
+}
+#banner button:hover {
+  background: yellow;
+  color: #1d1d1d;
+
 }
