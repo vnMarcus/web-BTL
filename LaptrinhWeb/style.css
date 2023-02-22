@@ -8,7 +8,7 @@
 
 body {
   width: 100%;
-  background-color: #dfdddc;
+  background-color: #9e9693;
 }
 
 h1 {
@@ -42,13 +42,22 @@ h5 {
 }
 
 h6 {
-  color: #d8d8d8;
+  font-size: 1.3;
+  font-weight: 600;
+  color: #1d1d1d;
 }
-
+span{
+  font-size: 0.7rem;
+  font-weight: 200;
+  color: #1d1d1d;
+}
 hr {
   width: 30px;
   height: 2px;
   background-color: #d2bbb4;
+}
+.section-p1{
+  padding: 40px 80px;
 }
 #header{
     display: flex;
@@ -129,4 +138,96 @@ hr {
   cursor: pointer;
   font-weight: 700;
   font-size: 15px   ;
+}
+#summary{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#summary .sum-box {
+  width: 180px;
+  text-align: center;
+  padding: 40px 45px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0 , 0.03);
+  border: 1px solid #b74624;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+#summary .sum-box:hover{
+  box-shadow: 10px 10px 54px rgba(70, 63, 221 , 0.1);
+}
+#summary .sum-box img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+#summary .sum-box h6{
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px ;
+  color:#ba1212;
+  background-color: rgb(58, 63, 139);
+}
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid wheat;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0 , 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0 , 0.06);
+
+}
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .des span{
+  color: rgb(56, 53, 53);
+  font-size: 12px;
+}
+#product1 .pro .des h5{
+  padding-top: 7px;
+  color: #1e1917;
+}
+#product1 .pro .des i{
+  font-size: 12px;
+  color: rgb(220, 220, 33);
+}
+#product1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+#product1 .pro .cart{
+  width: 35px;
+  height: 35px;
+  line-height: 40px;
+  border-radius: 40px;
+  background-color: rgb(214, 148, 148);
+  font-weight: 500;
+  color: rgb(172, 75, 75);
+  border: 1px solid rgb(143, 134, 134);
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
 }
