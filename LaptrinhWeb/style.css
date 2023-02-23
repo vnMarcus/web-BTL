@@ -184,6 +184,10 @@ button.normal{
   color:#ba1212;
   background-color: rgb(58, 63, 139);
 }
+#product1 {
+  text-align: center;
+  text-decoration: wavy;
+}
 #product1 .pro-container{
   display: flex;
   justify-content: space-around;
@@ -277,4 +281,14 @@ button.normal{
   background: yellow;
   color: #1d1d1d;
 
+}
+#sm-banner{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+#sm-banner a:hover{
+  background-color: #ba1212;
+  color: #1c0ae2;
 }
