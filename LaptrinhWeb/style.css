@@ -297,3 +297,52 @@ button.normal{
   background-color: #ba1212;
   color: #1c0ae2;
 }
+#newletter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("img/banner/banner6");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: rgb(97, 12, 223);
+
+  
+}
+#newletter h4{
+  font-size: 22px;
+  font-weight: 700;
+  color: aliceblue;
+}
+#newletter .form{
+  display: flex;
+  width: 40%;
+}
+#newletter p{
+  font-size: 14px;
+  font-weight: 500;
+  color: #eded0c;
+}
+#newletter p span{
+  font-weight: 800;
+  color: #ba1212;
+}
+#newletter input{
+  height: 3.12;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent ;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newletter button{
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
