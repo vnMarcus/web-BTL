@@ -154,6 +154,10 @@ button.normal{
   font-weight: 700;
   font-size: 15px   ;
 }
+#hero button:hover{
+  background-color: #ba1212;
+  color: #1c0ae2;
+}
 #summary{
   display: flex;
   align-items: center;
@@ -286,6 +290,7 @@ button.normal{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 40px 80px;
   gap: 20px;
 }
 #sm-banner a:hover{
