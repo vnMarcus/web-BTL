@@ -324,6 +324,7 @@ button.normal{
   color: #eded0c;
 }
 #newletter p span{
+  font-size: 16px;
   font-weight: 800;
   color: #ba1212;
 }
@@ -345,4 +346,55 @@ button.normal{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+footer
+{
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .col
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
 
+}
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  
+}
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+  
+}
+footer .follow{
+  margin-top: 20px;
+}
+footer .follow i{ 
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover
+{
+  color: red;
+}
+footer .copyright
+{
+  width: 100%;
+  text-align: center;
+}
