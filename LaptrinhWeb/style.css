@@ -540,3 +540,19 @@ footer .copyright
   color: #065e58;
   z-index: -9;
 }
+/* About Page */
+#page-header .about-head{
+  background-image: url(img\about\banner.png);
+}
+#about-head
+{
+  display: flex;
+  align-items: center;
+}
+#about-head img{
+  width: 50%;
+  height: auto;
+}
+#about-head div{
+  padding-left: 40px;
+}
