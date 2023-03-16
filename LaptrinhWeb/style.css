@@ -436,6 +436,7 @@ footer .copyright
 #prodetails{
   display: flex;
   margin-top: 20px;
+  gap: 200px;
 }
 #prodetails .single-pro-image{
   width: 40%;
@@ -654,5 +655,26 @@ footer .copyright
     font-size: 16px;
     font-weight: 600;
     color: black;
+
+}
+#featured{
+	cursor: pointer;
+
+}
+#img-container{
+	z-index: 1;
+	position: relative;
+  height: 200px;
+  width: 30%;
+}
+
+#lens{
+	z-index: 2;
+	position: absolute;
+	height: 125px;
+	width: 125px;
+	border:2px solid black;
+	background-repeat: no-repeat;
+	cursor: none;
 
 }
