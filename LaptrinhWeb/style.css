@@ -678,3 +678,98 @@ footer .copyright
 	cursor: none;
 
 }
+/* Cart */
+#cart table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+
+}
+#cart table tr{
+  border-bottom: 3px solid #eee7e7;
+}
+#cart table img{
+  width: 70px;
+}
+#cart table td:nth-child(1)
+{
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+#cart table td:nth-child(2)
+{
+  width: 150px;
+  text-align: center;
+  font-size: 18px;
+}
+#cart table td:nth-child(3)
+{
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6)
+{
+  width: 150px;
+  text-align: center;
+  font-size: 18px;
+}
+#cart table td:nth-child(5) input{
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+#cart table thead{
+  border: 1px solid rgb(223, 122, 122);
+  border-left: none;
+  border-right: none;
+}
+#cart table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px;
+}
+#cart table tbody tr td
+{
+  padding-top: 15px;
+}
+#cart table tbody td
+{
+  font-size: 20px;
+}
+#cart-add{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sub-total{
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid whitesmoke;
+  padding: 30px;
+}
+#sub-total h3{
+  padding-bottom: 15px;
+}
+#sub-total button{
+  background: #088178;
+  color: white;
+  padding: 12px 20px;
+  align-items: center;
+}
+#sub-total table
+{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#sub-total table td{
+  width: 50%;
+  border: 1px solid whitesmoke;
+  padding: 10px;
+  font-size: 18px;
+}
