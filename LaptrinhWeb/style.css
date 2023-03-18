@@ -85,6 +85,29 @@ button.normal{
     position: sticky;
     top: 0;
     left: 0;
+    gap: 50px;
+}
+#login
+{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px;
+  font-size: 10px;
+
+}
+#login a{
+  font-size: 20px;
+  text-decoration: wavy;
+  font-weight: 200;
+  transition: 0.5s ease;
+  color: #088178;
+}
+#login h4
+{
+  font-size: 900;
+  font-weight: 600;
+  color: #ea1515;
 }
 #navbar{
     display: flex;
@@ -104,6 +127,8 @@ button.normal{
     transition: 0.3s ease;
 }
 #navbar li a:hover,
+#login a:hover,
+#login a:active
 #navbar li a.active {
     color: #c2c81d;
 }
