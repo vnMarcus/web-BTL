@@ -327,7 +327,6 @@ button.normal{
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url("img/banner/banner6");
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: rgb(97, 12, 223);
@@ -516,9 +515,12 @@ footer .copyright
   font-size: 15px;
 }
 /* blog page */
-#page-header .bloghead{
-  background-image: url("img/banner/banner7");
-} 
+#page-header.blog-header{
+  background-image: url("img/banner/banner9.jpg");
+  
+}
+
+
 #blog{
   padding: 150px 150px 0 150px;
 }
@@ -567,8 +569,9 @@ footer .copyright
   z-index: -9;
 }
 /* About Page */
-#page-header .about-head{
-  background-image: url(img\about\banner.png);
+#page-header.about-head{
+  background-image: url("img/banner/banner7.png");
+  
 }
 #about-head
 {
@@ -584,6 +587,13 @@ footer .copyright
 }
 
 /* Contact*/
+#page-header.contact-head{
+  background-image: url("img/banner/banner10.jpg");
+}
+#page-header.contact-head h2,
+#page-header.contact-head p{
+  color: #065e58;
+}
 #contact-details
 {
   display: flex;
@@ -704,6 +714,12 @@ footer .copyright
 
 }
 /* Cart */
+#cart.section-p1 h2{
+  text-align: center;
+  text-decoration: dotted;
+  color: #080605;
+  font-weight: 500;
+}
 #cart table{
   width: 100%;
   border-collapse: collapse;
