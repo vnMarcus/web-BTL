@@ -1,5 +1,4 @@
-create database test_db;
-use test_db;
+
 INSERT INTO `test_db`.`user`
 (`user_name`,
 `fullname`,
