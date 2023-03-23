@@ -24,13 +24,15 @@ public class UserDAO {
             rs = ps.executeQuery();
             while (rs.next()){
                 return new User(
-                        rs.getString(1),
+                        rs.getLong(1),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6)
+                        rs.getString(6),
+                        rs.getString(7)
                 );
+
             }
         } catch (Exception e){
 
@@ -39,6 +41,11 @@ public class UserDAO {
         return null;
     }
 
+    public static void main(String[] args) {
+        UserDAO userDAO = new UserDAO();
+        User a = userDAO.login("john.doe", "p@ssword1");
+        System.out.println(a);
 
+    }
 
 }
