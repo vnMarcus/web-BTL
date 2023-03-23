@@ -375,7 +375,8 @@ footer
   background: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 90px;
 }
 footer .col
 {
@@ -406,11 +407,15 @@ footer a{
 }
 footer .follow{
   margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
 footer .follow i{ 
   color: #465b52;
   padding-right: 4px;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 footer .follow i:hover,
 footer a:hover
