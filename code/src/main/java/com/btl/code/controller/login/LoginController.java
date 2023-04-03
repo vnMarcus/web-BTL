@@ -1,4 +1,4 @@
-package com.btl.code.controller;
+package com.btl.code.controller.login;
 
 import com.btl.code.dao.UserDAO;
 import com.btl.code.model.User;
@@ -60,7 +60,15 @@ public class LoginController extends HttpServlet {
 
         // Check valid userName and password
         HttpSession httpSession = request.getSession();
-        if (userName != null && password != null){
+        if (userName == null || userName.equals("")){
+            request.setAttribute("error", "Please enter username");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
+        else if (password == null || password.equals("")){
+            request.setAttribute("error", "Please enter the password");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
+        else{
             UserDAO userDAO = new UserDAO();
             User a = userDAO.login(userName, password);
 

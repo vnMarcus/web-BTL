@@ -1,4 +1,4 @@
-package com.btl.code.controller;
+package com.btl.code.controller.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

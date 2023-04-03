@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
@@ -28,12 +28,12 @@
                 <h1 style="color:red;"> ${requestScope.error}</h1>
                 <div class="auth-form__form">
                     <div class="auth-form__group">
-                        <input type="text" value="${username}" rules = "required" name="name" id = "name" class="auth-form__input" placeholder="Email or phone number">
+                        <input type="text" value="${username}" rules = "required" name="name" id = "name" class="auth-form__input" placeholder="Email or phone number" required="required">
                         <span class="form-message"></span>
                     </div>
 
                     <div class="auth-form__group">
-                        <input type="password"  value="${password}" name= "password" rules = "required|min:6" autocomplete="current-password" autocomplete="current-password"  id="id_password" class="auth-form__input" placeholder="Password">
+                        <input type="password"  value="${password}" name= "password" rules = "required|min:6" autocomplete="current-password" autocomplete="current-password"  id="id_password" class="auth-form__input" placeholder="Password" required="required">
                         <i class="far fa-eye" id="togglePassword"></i>
                         <span class="form-message"></span>
                     </div>
@@ -49,7 +49,7 @@
                         <span>Remember me</span>
                     </div>
                     <div class="auth-form__forgot">
-                        <a href="" class="">
+                        <a href="forgot.jsp" class="">
                             Forgot password?
                         </a>
                     </div>
@@ -73,7 +73,7 @@
 
                 <div class="auth-form__register">
                     Don't you have Account?
-                    <a href="./Register.html">Create new account</a>
+                    <a href="register">Create new account</a>
                 </div>
 
             </form>
@@ -91,7 +91,6 @@
         password.setAttribute('type', type);
         this.classList.toggle('fa-eye-slash');
     });
-</script
 </script>
 
 </body>

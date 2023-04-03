@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Electroshop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
@@ -38,7 +38,7 @@
     <div id="login">
         <a href="login">Login</a>
         <h4><||></h4>
-        <a href="register.html">Register</a>
+        <a href="register">Register</a>
     </div>
     <%
         }
@@ -348,8 +348,8 @@
 </section>
 <section id="sm-banner">
     <a href="#"><img src="img/banner/Banner2.PNG" height="200" style="width:100%" class="pic" alt=""></a>
-    <a href="#"><img src="img/banner/Banner3.PNG" height="200" style="width:100%" class="pic1" alt=""></a>
-    <a href="#"><img src="img/banner/Banner4.PNG" height="200" style="width:100%" class="pic2" alt=""></a>
+    <a href="#"><img src="img/banner/banner3.PNG" height="200" style="width:100%" class="pic1" alt=""></a>
+    <a href="#"><img src="img/banner/banner4.PNG" height="200" style="width:100%" class="pic2" alt=""></a>
 </section>
 <section id="newletter" class="section-p1 section-m1">
     <div class="newtext">

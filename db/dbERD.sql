@@ -1,6 +1,6 @@
 create database test_db;
 use test_db;
-CREATE TABLE `user` (id bigint(19) NOT NULL AUTO_INCREMENT, user_name varchar(50) NOT NULL UNIQUE, fullname varchar(50) NOT NULL, password varchar(50) NOT NULL, phone_number varchar(11) NOT NULL, email varchar(50) NOT NULL, address varchar(100), PRIMARY KEY (id));
+CREATE TABLE `user` (id bigint(19) NOT NULL AUTO_INCREMENT, user_name varchar(50) NOT NULL UNIQUE, fullname varchar(50) NOT NULL, password varchar(100) NOT NULL, phone_number varchar(11) NOT NULL, email varchar(50) NOT NULL, address varchar(100), PRIMARY KEY (id));
 CREATE TABLE Product (id bigint(19) NOT NULL AUTO_INCREMENT, product_name varchar(50) NOT NULL UNIQUE, price double NOT NULL, descriptions text NOT NULL, images text NOT NULL, quantity int(10) NOT NULL, Categoryid bigint(20) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Orders_detail (quantity int(11), price double, Productid bigint(19) NOT NULL, Ordersid bigint(19) NOT NULL, PRIMARY KEY (Productid, Ordersid));
 CREATE TABLE Category (id bigint(20) NOT NULL AUTO_INCREMENT, category_name varchar(30) NOT NULL, descriptions text, parent_category_id bigint(20) DEFAULT NULL, PRIMARY KEY (id));
