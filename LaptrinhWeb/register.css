@@ -7,6 +7,7 @@
     border-radius: 12px;
     background-image:url(/LaptrinhWeb/img/bgregister.jpg);
     background-repeat: no-repeat;
+    
 }
 .logo {
     height: 140px;
@@ -163,6 +164,9 @@
         width: 100%;
         height: auto;
         border: none;
+        margin: auto;
+        border: none;
+        border-radius: 0%;
     }
     .logo {
         width: 100%;
@@ -205,6 +209,9 @@
         font-size: smaller;
     }
     .box1 #user_name input {
+        font-size: smaller;
+    }
+    .last_box a {
         font-size: smaller;
     }
 }
