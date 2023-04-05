@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="ValidateOtp">
+<form action="ValidateOtp" method="post">
     <p>OTP</p>
     <input type="text" name="otp" placeholder="Enter OTP">
     <button>Check OTP</button>
