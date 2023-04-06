@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f737e864-9632-406d-83fa-0a37cd9d4b08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../db/dbERD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../db/dbERD.sql" afterDir="false" />
-    </list>
+    <list default="true" id="f737e864-9632-406d-83fa-0a37cd9d4b08" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +151,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.login.jsp" />
-        <item itemvalue="JavaScript Debug.login.jsp (1)" />
         <item itemvalue="Application.UserDAO" />
         <item itemvalue="JavaScript Debug.test.html (1)" />
         <item itemvalue="JavaScript Debug.test.html" />
