@@ -5,20 +5,14 @@
     margin-left: 25%;
     margin-top: 60px;
     border-radius: 12px;
-    background-image:
-            radial-gradient(at 61% 4%, hsla(303, 91%, 61%, 1) 0px, transparent 50%),
-            radial-gradient(at 75% 66%, hsla(196, 91%, 79%, 1) 0px, transparent 50%),
-            radial-gradient(at 98% 88%, hsla(76, 87%, 78%, 1) 0px, transparent 50%),
-            radial-gradient(at 23% 16%, hsla(238, 96%, 77%, 1) 0px, transparent 50%),
-            radial-gradient(at 95% 65%, hsla(13, 91%, 75%, 1) 0px, transparent 50%),
-            radial-gradient(at 10% 79%, hsla(228, 96%, 69%, 1) 0px, transparent 50%),
-            radial-gradient(at 85% 58%, hsla(328, 81%, 68%, 1) 0px, transparent 50%);
+    background-image:url(/code/src/main/webapp/img/bgregister.jpg);
     background-repeat: no-repeat;
+    
 }
 .logo {
     height: 140px;
     width: 100%;
-
+    
 }
 .logo img {
     width:300px;
@@ -39,7 +33,7 @@
     font-weight: 600;
     font-size: 2.8rem;
     margin-left: 42%;
-
+    
 }
 
 .box {
@@ -73,7 +67,7 @@
     border: 1px solid #cccc;
     margin-top: 7%;
     margin-left: 9%;
-
+    
 }
 .box2 {
     width: 50%;
@@ -94,7 +88,7 @@
     height: 100px;
 }
 .box2 #password #togglePassword {
-    margin-left: -30px;
+    margin-left: -30px; 
     cursor: pointer;
 }
 .box2 .form_input {
@@ -105,7 +99,7 @@
     border: 1px solid #cccc;
     margin-top: 7%;
     margin-left: 9%;
-
+    
 }
 .form_input {
     padding-left: 10px;
@@ -126,14 +120,14 @@
     background-color: rgba(41, 17, 225, 0.8);
     margin-left: 35%;
     margin-top: 3%;
-
+    
 }
 .sign_up_2 a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.6rem;
     color: #f7f4f4;
-
+    
 }
 .login:hover
 {
@@ -147,11 +141,77 @@
     font-weight: 500;
     font-size: 1.3rem;
     color: #000;
-
+    
 }
 .last_box a
 {
     text-decoration: none;
     font-weight: 600;
     color: blue;
+}
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .logo img {
+        margin-left: 17%;
+    }
+    .sign_up_1 #sign {
+        margin-left: 35%;
+    }
+}
+/* mobile: width < 740px */
+@media only screen and ( max-width: 46.1875em){
+    .container{
+        width: 100%;
+        height: auto;
+        border: none;
+        margin: auto;
+        border: none;
+        border-radius: 0%;
+    }
+    .logo {
+        width: 100%;
+        height: 100px;
+    }
+    .logo img {
+        width: 200px;
+        height: auto;
+        margin-left: 25%;
+    }
+    .sign_up_1 {
+        width: 100%;
+        height: 50px;
+    }
+    .sign_up_1 #sign {
+        font-size: 2rem;
+        margin-left: 35%;
+    }
+    .sign_up_2 .login {
+        width: 45%;
+        height: 50%;
+        margin-left: 30%;
+    }
+    .login a {
+        font-size: smaller;
+    }
+    .box2 #fullname input {
+        font-size: smaller;
+    }
+    .box2 #email input {
+        font-size: smaller;
+    }
+    .box2 #password input {
+        font-size: smaller;
+    }
+    .box1 #address input {
+        font-size: smaller;
+    }
+    .box1 #phone_number input {
+        font-size: smaller;
+    }
+    .box1 #user_name input {
+        font-size: smaller;
+    }
+    .last_box a {
+        font-size: smaller;
+    }
 }
