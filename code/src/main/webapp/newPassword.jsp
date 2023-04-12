@@ -3,6 +3,7 @@
 <jsp:include page="common/taglib.jsp"></jsp:include>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +26,11 @@
 
         <div class="inputDiv">
           <label class="inputLabel" for="password">New Password</label>
-          <input type="password" id="password" name="password" autocomplete="current-password" required="required">
+          <input type="password" id="password" name="password"  required>
         </div>
 
         <div class="inputDiv">
-          <label class="inputLabel" for="confirmPassword">Confirm Password</label>
+          <label class="inputLabel" for="re_password">Confirm Password</label>
           <input type="password" id="re_password" name="re_password" >
         </div>
         <div class="buttonWrapper">
