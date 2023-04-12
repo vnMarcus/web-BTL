@@ -15,14 +15,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/otp.css">
 </head>
+<script src="js/otp.js"></script>
+
 <body>
-<form action="ValidateOtp" method="post">
-    <p>OTP</p>
-    <input type="text" name="otp" placeholder="Enter OTP">
+<form action="ValidateOtp" method="post" class="container">
+    <h1>ENTER OTP</h1>
+<%--    <input type="text" name="otp" placeholder="Enter OTP">--%>
+    <div class="userInput">
+        <input type="text" id='first' name="first" maxlength="1" onkeyup="moveToNext(this,'second')">
+        <input type="text" id="second" name="second" maxlength="1" onkeyup="moveToNext(this,'third')">
+        <input type="text" id="third" name="third" maxlength="1" onkeyup="moveToNext(this,'fourth')">
+        <input type="text" id="fourth" name="fourth" maxlength="1" onkeyup="moveToNext(this,'fifth')">
+        <input type="text" id="fifth" name="fifth" maxlength="1" onkeyup="moveToNext(this, 'sixth')">
+        <input type="text" id="sixth" name="sixth" maxlength="1">
+    </div>
     <button>Check OTP</button>
 </form>
 
+
 </body>
+
 </html>
