@@ -1,5 +1,5 @@
 var password = document.getElementById("password")
-  , confirm_password = document.getElementById("re_password");
+    , confirm_password = document.getElementById("re_password");
 
 
 enableSubmitButton();
@@ -29,39 +29,17 @@ function disableSubmitButton() {
 
 function validateSignupForm() {
   var form = document.getElementById('signupForm');
-  
+
   for(var i=0; i < form.elements.length; i++){
-      if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
-        console.log('There are some required fields!');
-        return false;
-      }
+    if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
+      console.log('There are some required fields!');
+      return false;
     }
-  
+  }
+
   if (!validatePassword()) {
     return false;
   }
-  
-  onSignup();
+  alert("Change password sucessfull.")
 }
 
-function onSignup() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    
-    disableSubmitButton();
-    
-    if (this.readyState == 4 && this.status == 200) {
-      enableSubmitButton();
-    }
-    else {
-      console.log('AJAX call failed!');
-      setTimeout(function(){
-        enableSubmitButton();
-      }, 1000);
-    }
-    
-  };
-  
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}

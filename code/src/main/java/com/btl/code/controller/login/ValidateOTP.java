@@ -14,13 +14,20 @@ public class ValidateOTP extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int value=Integer.parseInt(request.getParameter("otp"));
+        String first = request.getParameter("first");
+        String second = request.getParameter("second");
+        String third = request.getParameter("third");
+        String fourth = request.getParameter("fourth");
+        String fifth = request.getParameter("fifth");
+        String sixth = request.getParameter("sixth");
+
+        String result = first + second + third + fourth + fifth + sixth;
         HttpSession session=request.getSession();
         int otp=(int)session.getAttribute("otp");
         RequestDispatcher dispatcher=null;
 
 
-        if (value==otp)
+        if (result.equals(otp+""))
         {
 
             request.setAttribute("email", request.getParameter("email"));

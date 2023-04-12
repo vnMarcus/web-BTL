@@ -1,6 +1,7 @@
 <jsp:include page="common/taglib.jsp"></jsp:include>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,34 +16,34 @@
 </head>
 <body>
 
-<form class="container" method="post" action="register" >
+<h1 style="color:red;"> ${requestScope.status}</h1>
+
+<form class="container"  method="post" action="register" >
     <div class="logo">
-        <img src="/LaptrinhWeb/img/logo.png" alt="">
+        <img src="img/logo.png" alt="">
     </div>
-    <h1 style="color:red;"> ${requestScope.status}</h1>
     <div class="sign_up_1">
         <p id="sign">Sign Up</p>
-        <!-- <p id="quote">It's quick and easy.</p> -->
     </div>
 
     <div class="box">
         <div class="box1">
             <div id="user_name">
-                <input type="text" name="user_name" class="form_input" placeholder="User_name">
+                <input type="text" name="user_name" class="form_input" placeholder="User_name" required="required">
             </div>
             <div id="phone_number">
-                <input type="text" name="phone_number" class="form_input" placeholder="Phone_number">
+                <input type="text" name="phone_number" class="form_input" placeholder="Phone_number" required="required">
             </div>
             <div id="address">
-                <input type="text" name="address" class="form_input" placeholder="Address">
+                <input type="text" name="address" class="form_input" placeholder="Address" required="required">
             </div>
         </div>
         <div class="box2">
-            <div id="full_name">
-                <input type="text"  name="full_name" class="form_input" placeholder="Fullname">
+            <div id="fullname">
+                <input type="text" name="full_name" class="form_input" placeholder="Fullname" required="required">
             </div>
             <div id="email">
-                <input type="email" name="email" class="form_input" placeholder="Email">
+                <input type="email" name="email" class="form_input" placeholder="Email" required="required">
 
             </div>
             <div id="password">
@@ -74,6 +75,8 @@
         this.classList.toggle('fa-eye-slash');
     });
 </script>
+
+
 
 </body>
 </html>

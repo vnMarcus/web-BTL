@@ -26,6 +26,7 @@ public class NewPassword extends HttpServlet {
                 boolean flag = userDAO.updatePassword((String) session.getAttribute("email"), newPassword);
                 if (flag){
                     request.setAttribute("status", "resetSuccess");
+                    System.out.println("Sucess");
                     dispatcher = request.getRequestDispatcher("login.jsp");
                 }
                 else {
