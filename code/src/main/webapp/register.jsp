@@ -55,12 +55,12 @@
     </div>
     <div class="sign_up_2">
         <button class="login ">
-            Sign up
+            <a href="./index.html">Sign Up</a>
         </button>
     </div>
     <div class="last_box">
         Do you have account?
-        <a href="login">Sign in</a>
+        <a href="./login.html">Sign in</a>
     </div>
 
 </form>

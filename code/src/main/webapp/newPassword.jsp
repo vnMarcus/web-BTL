@@ -17,9 +17,7 @@
 <div class="mainDiv">
     <div class="cardStyle">
         <form action="newPassword" method="post" name="signupForm" id="signupForm">
-
             <img src="img/logo.png" id="signupLogo" >
-
             <h2 class="formTitle">
                 Change Your Password
             </h2>
