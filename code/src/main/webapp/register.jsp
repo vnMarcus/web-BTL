@@ -1,6 +1,7 @@
 <jsp:include page="common/taglib.jsp"></jsp:include>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,11 +16,10 @@
 </head>
 <body>
 
-<form class="container" method="post" action="register" >
+<form class="container">
     <div class="logo">
         <img src="img/logo.png" alt="">
     </div>
-    <h1 style="color:red;"> ${requestScope.status}</h1>
     <div class="sign_up_1">
         <p id="sign">Sign Up</p>
     </div>
@@ -27,21 +27,21 @@
     <div class="box">
         <div class="box1">
             <div id="user_name">
-                <input type="text" name="user_name" class="form_input" placeholder="User_name">
+                <input type="text" class="form_input" placeholder="User_name">
             </div>
             <div id="phone_number">
-                <input type="text" name="phone_number" class="form_input" placeholder="Phone_number">
+                <input type="text" class="form_input" placeholder="Phone_number">
             </div>
             <div id="address">
-                <input type="text" name="address" class="form_input" placeholder="Address">
+                <input type="text" class="form_input" placeholder="Address">
             </div>
         </div>
         <div class="box2">
-            <div id="full_name">
-                <input type="text"  name="full_name" class="form_input" placeholder="Fullname">
+            <div id="fullname">
+                <input type="text" class="form_input" placeholder="Fullname">
             </div>
             <div id="email">
-                <input type="email" name="email" class="form_input" placeholder="Email">
+                <input type="email"  class="form_input" placeholder="Email">
 
             </div>
             <div id="password">
@@ -53,12 +53,12 @@
     </div>
     <div class="sign_up_2">
         <button class="login ">
-            Sign up
+            <a href="./index.html">Sign Up</a>
         </button>
     </div>
     <div class="last_box">
         Do you have account?
-        <a href="login">Sign in</a>
+        <a href="./login.html">Sign in</a>
     </div>
 
 </form>
