@@ -1,5 +1,5 @@
 var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirmPassword");
+  , confirm_password = document.getElementById("re_password");
 
 
 enableSubmitButton();
