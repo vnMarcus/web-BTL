@@ -1,31 +1,48 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: vinhp
-  Date: 3/25/2023
-  Time: 9:54 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="common/taglib.jsp"></jsp:include>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Password</title>
+  <link rel="stylesheet" href="/code/src/main/webapp/css/newPassword.css">
 </head>
 <body>
-<form action="newPassword" method="post">
-    <div >
-        <input type="password"  name= "password" autocomplete="current-password"  class="auth-form__input" placeholder="Password" required="required">
-    </div>
-    <div >
-        <input type="password"  name= "re_password"  autocomplete="current-password"  class="auth-form__input" placeholder="Re_password" required="required">
-    </div>
-    <button type="submit"> Confirm</button>
-</form>
+  <div class="mainDiv">
+    <div class="cardStyle">
+      <form action="newPassword" method="post" name="signupForm" id="signupForm">
 
-</body>
+        <img src="/code/src/main/webapp/img/logo.png" id="signupLogo" >
+
+        <h2 class="formTitle">
+          Change Your Password
+        </h2>
+
+        <div class="inputDiv">
+          <label class="inputLabel" for="password">New Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required="required">
+        </div>
+
+        <div class="inputDiv">
+          <label class="inputLabel" for="confirmPassword">Confirm Password</label>
+          <input type="password" id="re_password" name="re_password" >
+        </div>
+        <div class="buttonWrapper">
+          <button type="submit" id="submitButton" onclick="validateSignupForm()"
+            class="submitButton pure-button pure-button-primary">
+            <span>Confirm</span>
+            <span id="loader"></span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+    <script src="/code/src/main/webapp/js/newPassword.js"></script>
+  </body>
 </html>
