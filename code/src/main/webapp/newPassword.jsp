@@ -11,14 +11,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Password</title>
-  <link rel="stylesheet" href="/code/src/main/webapp/css/newPassword.css">
+  <link rel="stylesheet" href="css/newPassword.css">
 </head>
 <body>
   <div class="mainDiv">
     <div class="cardStyle">
       <form action="newPassword" method="post" name="signupForm" id="signupForm">
 
-        <img src="/code/src/main/webapp/img/logo.png" id="signupLogo" >
+        <img src="img/logo.png" id="signupLogo" >
 
         <h2 class="formTitle">
           Change Your Password
@@ -44,6 +44,6 @@
       </form>
     </div>
   </div>
-    <script src="/code/src/main/webapp/js/newPassword.js"></script>
+    <script src="js/newPassword.js"></script>
   </body>
 </html>
