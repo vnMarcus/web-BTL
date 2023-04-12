@@ -17,12 +17,11 @@
 
 <form class="container" method="post" action="register" >
     <div class="logo">
-        <img src="/LaptrinhWeb/img/logo.png" alt="">
+        <img src="img/logo.png" alt="">
     </div>
     <h1 style="color:red;"> ${requestScope.status}</h1>
     <div class="sign_up_1">
         <p id="sign">Sign Up</p>
-        <!-- <p id="quote">It's quick and easy.</p> -->
     </div>
 
     <div class="box">
