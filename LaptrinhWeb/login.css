@@ -209,19 +209,3 @@
     margin-top: -30px;
     margin-right: 20px;
 }
-
-@media only screen and ( max-width: 46.1875em){
-    #auth-form {
-        border: none;
-    }
-    .auth-form__group {
-        width: 380px;
-    }
-    .auth-form__input {
-        width: 340px;
-    }
-    .auth-form__btn-login {
-        width: 380px;
-        margin-left: 3%;
-    }
-}

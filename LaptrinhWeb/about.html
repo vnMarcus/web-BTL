@@ -9,15 +9,44 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
+    <nav id="navbar_1">
+            <p>Welcome to Smart Electronic Store</p>
+            <i class="fas fa-map-marker-alt" style="color: #696969;"></i>
+            <a href="">Store Locator</a>
+            <a href="">Track your Order</a>
+            <i class="far fa-shopping-bag" style="color: #696969;"></i>
+            <a href="">Shop</a>
+            <i class="fas fa-user" style="color: #696969;"></i>
+            <a href="">My Account</a>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#"><i class="fa fa-fw fa-home"></i>About</a>
+        <a href="#"><i class="fa fa-fw fa-wrench"></i>Services</a>
+        <a href="#"><i class="fa fa-fw fa-shopping-cart"></i>Shop</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+      </div>
     <section id="header">
-        <a  href="main.html"><img src="img/logo.png" class="logo" height="140" alt=""></a>
+        <a  href="main.html"><img src="img/logo.png" class="logo" height="120" alt=""></a>
             <ul id="navbar">
+                <li><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
                 <li><a href="main.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a class="active" href="about.html">About Us</a></li>
                 <li><a href="blog.html">Blog</a></li>   
                 <li><a href="contact.html">Contact Us</a></li>
-                <input type="text" placeholder="Search..">
+                <div class="search">
+                    <form action="#">
+                        <input type="text"
+                            placeholder=" Search"
+                            name="search">
+                        <button>
+                            <i class="fa fa-search"
+                                style="font-size: 18px;">
+                            </i>
+                        </button>
+                    </form>
+                </div>
                 <li><a href="myaccount.html"><i class="fas fa-user-alt"></i></a></li>
                 <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
             </ul>
@@ -89,9 +118,7 @@
             </div>
         </div>
         <div class="col">
-            <h4>Contact</h4>
-            <p><strong>Address: </strong> 87/9 Tan Xuan,Xuan Dinh, Ha Noi.</p>
-            <p><strong>Phone: </strong> 09899982351.</p>
+            <h4>Contact</h4>a  09899982351.</p>
             <p><strong>Hour </strong> 8:00-19:00,Mon - Sat.</p>
         </div>
         <div class="col">
@@ -110,8 +137,8 @@
         <div class="copyright">
             <p>© Electro - All Rights Reserved</p>
         </div>
-    </footer>
-
-
+    </footer>   
+    <script src="script.js">
+    </script>
 </body>
 </html> 

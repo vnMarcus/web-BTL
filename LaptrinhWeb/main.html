@@ -9,24 +9,53 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-    <section id="header">
-        <a  href="main.html"><img src="img/logo.png" class="logo" height="140" alt=""></a>
-            <ul id="navbar">
-                <li><a class="active" href="main.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="blog.html">Blog</a></li>   
-                <li><a href="contact.html">Contact Us</a></li>
-                <input type="text" placeholder="Search..">
-                <li><a href="myaccount.html"><i class="fas fa-user-alt"></i></a></li>
-                <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
-            </ul>
-        <div id="login">
-                <a href="login.html">Login</a>
-                <h4><||></h4>
-                <a href="register.html">Register</a>
-        </div>
-    </section>
+    <nav id="navbar_1">
+        <p>Welcome to Smart Electronic Store</p>
+        <i class="fas fa-map-marker-alt" style="color: #696969;"></i>
+        <a href="">Store Locator</a>
+        <a href="">Track your Order</a>
+        <i class="far fa-shopping-bag" style="color: #696969;"></i>
+        <a href="">Shop</a>
+        <i class="fas fa-user" style="color: #696969;"></i>
+        <a href="">My Account</a>
+</nav>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#"><i class="fa fa-fw fa-home"></i>About</a>
+    <a href="#"><i class="fa fa-fw fa-wrench"></i>Services</a>
+    <a href="#"><i class="fa fa-fw fa-shopping-cart"></i>Shop</a>
+    <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+  </div>
+<section id="header">
+    <a  href="main.html"><img src="img/logo.png" class="logo" height="120" alt=""></a>
+        <ul id="navbar">
+            <li><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+            <li><a class="active" href="main.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>   
+            <li><a href="contact.html">Contact Us</a></li>
+            <div class="search">
+                <form action="#">
+                    <input type="text"
+                        placeholder=" Search"
+                        name="search">
+                    <button>
+                        <i class="fa fa-search"
+                            style="font-size: 18px;">
+                        </i>
+                    </button>
+                </form>
+            </div>
+            <li><a href="myaccount.html"><i class="fas fa-user-alt"></i></a></li>
+            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+        </ul>
+    <div id="login">
+            <a href="login.html">Login</a>
+            <h4><||></h4>
+            <a href="register.html">Register</a>
+    </div>
+</section>
     <section id="hero">
         <h4>Hot Offer</h4>
         <h1>Electronic Of the Season</h1>
@@ -378,7 +407,8 @@
             <p>© Electro - All Rights Reserved</p>
         </div>
     </footer>
-
+    <script src="script.js">
+    </script>
 
 </body>
 </html>
