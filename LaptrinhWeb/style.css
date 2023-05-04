@@ -9,7 +9,7 @@
 img {vertical-align: middle;}
 body {
   width: 100%;
-  background-color: #ece4e0;
+  background-color: #fefcfb;
 }
 
 h1 {
@@ -184,7 +184,7 @@ button.normal{
 }
 #navbar li a{
     text-decoration: none;
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 600;
     color: #1d1d1d;
     transition: 0.3s ease;
@@ -301,6 +301,7 @@ button.normal{
   width: 180px;
   text-align: center;
   padding: 20px 25px;
+  background-color: rgb(250, 248, 247);
   box-shadow: 20px 20px 34px rgba(0, 0, 0 , 0.03);
   border: 1px solid #b74624;
   border-radius: 6px;
@@ -336,6 +337,7 @@ button.normal{
   min-width: 250px;
   padding: 10px 12px;
   border: 1px solid wheat;
+  background-color: rgb(250, 248, 247);
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0 , 0.02);

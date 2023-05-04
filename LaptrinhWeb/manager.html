@@ -13,18 +13,19 @@
         <p>Welcome to Smart Electronic Store</p>
         <i class="fas fa-map-marker-alt" style="color: #696969;"></i>
         <a href="">Store Locator</a>
-        <i class="far fa-truck" style="color: #696969;"></i>
         <a href="">Track your Order</a>
+        <i class="far fa-shopping-bag" style="color: #696969;"></i>
+        <a href="">Shop</a>
         <i class="fas fa-user" style="color: #696969;"></i>
         <a href="">My Account</a>
 </nav>
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#"><i class="fa fa-fw fa-home"></i>About</a>
+    <a href="#"><i class="fa fa-fw fa-wrench"></i>Services</a>
     <a href="#"><i class="fa fa-fw fa-shopping-cart"></i>Shop</a>
     <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-    <a href="#"><i class="fa fa-fw fa-wrench"></i>Manage Product</a>
-</div>
+  </div>
 <section id="header">
     <a  href="main.html"><img src="img/logo.png" class="logo" height="120" alt=""></a>
         <ul id="navbar">
@@ -33,7 +34,7 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="blog.html">Blog</a></li>   
-            <li><a class="active" href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <div class="search">
                 <form action="#">
                     <input type="text"
@@ -46,7 +47,7 @@
                     </button>
                 </form>
             </div>
-            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            <li><a class="active"  href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
         </ul>
     <div id="login">
             <a href="login.html">Login</a>
@@ -54,73 +55,44 @@
             <a href="register.html">Register</a>
     </div>
 </section>
-    <section id="page-header" class="contact-head">
-        <h2>#Contact now</h2>
-        <p>IF you have problem call us or find where we are.</p>
+    <section id="cart" class="section-p1">
+        <h2>List of the products in your cart:</h2>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Products</td>
+                    <td>Price</td>
+                    <td>Subtotal</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/hotproducts/f1.png"></td>
+                    <td>Product Name</td>
+                    <td>159.99$</td>
+                    <td>159.99$</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/hotproducts/f1.png"></td>
+                    <td>Product Name</td>
+                    <td>159.99$</td>
+                    <td>159.99$</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/hotproducts/f1.png"></td>
+                    <td>Product Name</td>
+                    <td>159.99$</td>
+                    <td>159.99$</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-    <section id="contact-details" class="section-p1">
-        <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit us right now for head to head talk</h2>
-            <h3>Head Office</h3>
-            <div>
-                <li>
-                    <i class="fal fa-map"></i>
-                    <p>96A Trần Phú, P. Mộ Lao, Hà Đông, Hà Nội</p>
-                </li>
-                <li>
-                    <i class="far fa-envelope"></i>
-                    <p>contact@gmail.com</p>
-                </li>
-                <li>
-                    <i class="fas fa-phone-alt"></i>
-                    <p>09098999872</p>
-                </li>
-                <li>
-                    <i class="far fa-clock"></i>
-                    <p>Monday to Saturday: 8.00am to 16.00pm</p>
-                </li>
-            </div>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2925131522034!2d105.78524921538926!3d20.980908494785158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135accdd8a1ad71%3A0xa2f9b16036648187!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCB2aeG7hW4gdGjDtG5n!5e0!3m2!1sen!2s!4v1678854166795!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-    <section id="form-details">
-        <form action="">
-            <span>LEAVE A MESSAGE</span>
-            <h2>We will become better</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="Email"> 
-            <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <button class="normal">Send!</button>
-        </form>
-        <div class="people">
-            <div>
-                <img src="img/people/1.png">
-                <p><span>Cuong Bui Hoang</span> Job Something<br>Phone: 84+989998600<br>Email: sdassde2@gmail.com</p>
-            </div>
-            <div>
-                <img src="img/people/1.png">
-                <p><span>Cuong Bui Hoang</span> Job Something<br>Phone: 84+989998600<br>Email: sdassde2@gmail.com</p>
-            </div>
-            <div>
-                <img src="img/people/1.png">
-                <p><span>Cuong Bui Hoang</span> Job Something<br>Phone: 84+989998600<br>Email: sdassde2@gmail.com</p>
-            </div>
-        </div>
-    </section>
-    <section id="newletter" class="section-p1 section-m1">
-        <div class="newtext">
-            <h4>Sign Up For Newletter</h4>
-            <p>Get E-mail updates about our latest shop and <span>Special Offers.</span></p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email">
-            <button class="normal">Sign Up</button>
-        </div>
-    </section>  
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="img/logo.png" height="200" alt="">
@@ -158,6 +130,7 @@
         </div>
     </footer>
     <script src="script.js">
-    </script>
+    </script>  
+
 </body>
 </html> 
