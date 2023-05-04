@@ -51,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/web/clone/web-BTL/code",
+    "last_opened_file_path": "D:/web/web-BTL-vinh/code",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -348,24 +348,12 @@
       <workItem from="1681282809053" duration="4578000" />
       <workItem from="1681288609546" duration="2787000" />
       <workItem from="1681293675230" duration="1076000" />
-      <workItem from="1683186881067" duration="19000" />
-      <workItem from="1683186918652" duration="32000" />
+      <workItem from="1683189619521" duration="1352000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
