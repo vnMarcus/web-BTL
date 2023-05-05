@@ -322,6 +322,19 @@ button.normal{
   color:#ba1212;
   background-color: rgb(58, 63, 139);
 }
+.btn{
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin-right: 1rem;
+  background-color:#8d8585 ;
+  margin-top: 10px;
+}
+.actives{
+  background-color:#c9770b ;
+}
 #product1 {
   text-align: center;
   text-decoration: wavy;
@@ -332,7 +345,7 @@ button.normal{
   padding-top: 20px;
   flex-wrap: wrap;
 }
-#product1 .pro{
+#product1 .store-product{
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
@@ -345,33 +358,33 @@ button.normal{
   transition: 0.2s ease;
   position: relative;
 }
-#product1 .pro:hover{
+#product1 .store-product:hover{
   box-shadow: 20px 20px 30px rgba(0, 0, 0 , 0.06);
 
 }
-#product1 .pro .des{
+#product1 .store-product .des{
   text-align: start;
   padding: 10px 0;
 }
-#product1 .pro .des span{
+#product1 .store-product .des span{
   color: rgb(56, 53, 53);
   font-size: 12px;
 }
-#product1 .pro .des h5{
+#product1 .store-product .des h5{
   padding-top: 7px;
   color: #1e1917;
 }
-#product1 .pro .des i{
+#product1 .store-product .des i{
   font-size: 12px;
   color: rgb(220, 220, 33);
 }
-#product1 .pro .des h4{
+#product1 .prostore-product .des h4{
   padding-top: 7px;
   font-size: 16px;
   font-weight: 700;
   color: #1d1d1d;
 }
-#product1 .pro .cart{
+#product1 .store-product .cart{
   width: 35px;
   height: 35px;
   line-height: 40px;
@@ -385,7 +398,7 @@ button.normal{
   right: 10px;
 }
 
-#product1 .pro img{
+#product1 .store-product img{
   width: 100%;
   border-radius: 20px;
 }
