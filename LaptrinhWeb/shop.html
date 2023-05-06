@@ -13,19 +13,18 @@
         <p>Welcome to Smart Electronic Store</p>
         <i class="fas fa-map-marker-alt" style="color: #696969;"></i>
         <a href="">Store Locator</a>
+        <i class="far fa-truck" style="color: #696969;"></i>
         <a href="">Track your Order</a>
-        <i class="far fa-shopping-bag" style="color: #696969;"></i>
-        <a href="">Shop</a>
         <i class="fas fa-user" style="color: #696969;"></i>
         <a href="">My Account</a>
 </nav>
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#"><i class="fa fa-fw fa-home"></i>About</a>
-    <a href="#"><i class="fa fa-fw fa-wrench"></i>Services</a>
     <a href="#"><i class="fa fa-fw fa-shopping-cart"></i>Shop</a>
     <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-  </div>
+    <a href="manager.html"><i class="fa fa-fw fa-wrench"></i>Manage Product</a>
+</div>
 <section id="header">
     <a  href="main.html"><img src="img/logo.png" class="logo" height="120" alt=""></a>
         <ul id="navbar">
@@ -37,7 +36,7 @@
             <li><a href="contact.html">Contact Us</a></li>
             <div class="search">
                 <form action="#">
-                    <input type="text"
+                    <input type="text" id="search"
                         placeholder=" Search"
                         name="search">
                     <button>
@@ -55,14 +54,21 @@
             <a href="register.html">Register</a>
     </div>
 </section>
-    <section id="page-header">
+ <section id="page-header">
         <h2>Good Deal!</h2>
         <p>Best products you can find</p>
-    </section>
-    <section id="product1" class="section-p1">
+ </section>
+ <section id="product1" class="section-p1">
             <h2>Now available Products</h2>
+            <div id="filter-box">
+                <a href="#" class="btn actives" data-filter="all">All</a>
+                <a href="#" class="btn" data-filter="phone">Phones</a>
+                <a href="#" class="btn" data-filter="headphone">Headphones</a>
+                <a href="#" class="btn" data-filter="speaker">Speakers</a>
+                <a href="#" class="btn" data-filter="television">Televisions</a>     
+            </div>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='shopproduct.html';">
+                <div class="store-product phone">
                     <img src="img/hotproducts/f1.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -78,7 +84,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product headphone">
                     <img src="img/hotproducts/f2.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -94,7 +100,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product television">
                     <img src="img/hotproducts/f3.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -110,7 +116,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product phone">
                     <img src="img/hotproducts/f4.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -126,7 +132,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product speaker">
                     <img src="img/hotproducts/f5.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -142,7 +148,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product television">
                     <img src="img/hotproducts/f6.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -158,7 +164,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product headphone">
                     <img src="img/hotproducts/f2.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -174,7 +180,7 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <div class="pro">
+                <div class="store-product television">
                     <img src="img/hotproducts/f2.png" alt="">
                     <div class="des">
                         <span>Bluetooth Speakers</span>
@@ -190,135 +196,134 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-            
-            <div class="pro">
-                <img src="img/hotproducts/f1.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Notebook Widescreen Y700-17 GF790</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product headphone">
+                    <img src="img/hotproducts/f1.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Notebook Widescreen Y700-17 GF790</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$159.00</h4>
                     </div>
-                    <h4>$159.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f2.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product speaker">
+                    <img src="img/hotproducts/f2.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$1,347.00</h4>
                     </div>
-                    <h4>$1,347.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f3.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Smartphone 6S 32GB LTE</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product speaker">
+                    <img src="img/hotproducts/f3.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Smartphone 6S 32GB LTE</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$1,347.00</h4>
                     </div>
-                    <h4>$1,347.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f4.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Wireless Audio System Multiroom 360</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product headphone">
+                    <img src="img/hotproducts/f4.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Wireless Audio System Multiroom 360</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$799.00</h4>
                     </div>
-                    <h4>$799.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f5.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Notebook Widescreen Y700-17 GF790</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product phone">
+                    <img src="img/hotproducts/f5.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Notebook Widescreen Y700-17 GF790</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$69.00</h4>
                     </div>
-                    <h4>$69.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f6.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product television">
+                    <img src="img/hotproducts/f6.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$69.00</h4>
                     </div>
-                    <h4>$69.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f2.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product headphone">
+                    <img src="img/hotproducts/f2.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$1,347.00</h4>
                     </div>
-                    <h4>$1,347.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="img/hotproducts/f2.png" alt="">
-                <div class="des">
-                    <span>Bluetooth Speakers</span>
-                    <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="store-product speaker">
+                    <img src="img/hotproducts/f2.png" alt="">
+                    <div class="des">
+                        <span>Bluetooth Speakers</span>
+                        <h5>Tablet Thin EliteBook Revolve 810 G2</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$1,347.00</h4>
                     </div>
-                    <h4>$1,347.00</h4>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
         </div>
     </section>
     <section id="pagination" class="section-p1">
@@ -373,6 +378,8 @@
         </div>
     </footer>
     <script src="script.js">
+    </script>
+    <script src="filter.js">
     </script>
 
 </body>
