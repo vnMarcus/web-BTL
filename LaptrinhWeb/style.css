@@ -204,6 +204,38 @@ button.normal{
   bottom: -4px;
   left: 20px;
 }
+#navbar .dropbtn {
+  font-size: 12px;
+  background-color: white;
+  border: none;
+}
+#navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#navbar .dropdown-content a {
+  color: black;
+  font-size: 10;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#navbar .dropdown-content a:hover {background-color: #ddd;}
+
+#navbar .dropdown:hover .dropdown-content {display: block;}
+
+#navbar .dropdown:hover .dropbtn {color: #c2c81d;}
 .search input[type=text]{
   width:200px;
   height:25px;
