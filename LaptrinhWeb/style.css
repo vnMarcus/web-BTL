@@ -372,8 +372,9 @@ button.normal{
 }
 #product1 .pro-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-top: 20px;
+  gap: 2%;
   flex-wrap: wrap;
 }
 #product1 .store-product{
