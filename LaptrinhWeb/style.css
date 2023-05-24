@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "compass/css3";
 * {
   margin: 0;
   padding: 0;
@@ -485,8 +486,6 @@ button.normal{
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: rgb(97, 12, 223);
-
-  
 }
 #newletter h4{
   font-size: 22px;
@@ -599,22 +598,62 @@ footer .copyright
 #page-header p{
   color: #fff;
 }
-#pagination
+#paging
 {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
-#pagination a
-{
-  text-decoration: none;
-  background-color: #065e58;
-  padding: 15px 20px;
-  border-radius: 4px;
-  color: white;
-  font-weight: 600;
+.pgn{
+  width: 12.7%;
+  text-align: center;
+  background: #fff;
+  border-radius: 40px;
+  min-height: 40px;
+  overflow-x: hidden;
+  position: relative;
 }
-#pagination a i{
-  font-size: 16px;
+.prev{
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+.next{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+.btn-page,
+.prev,
+.next{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
   font-weight: 600;
+  transition: all .3s ease-in-out;
+  font-size: 15px;
+  color: #777;
+}
+.btn-page:hover,
+.prev:hover,    
+.next:hover,
+.active {
+  color: #fff !important;
+  background: linear-gradient(45deg, #4173ff, #ac60ff);
+}
+.pages{
+  position: absolute;
+  left: 40px;
+  transition: all .3s ease-in-out;
+}
+.page-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 /* Detail Page */
 #prodetails{
