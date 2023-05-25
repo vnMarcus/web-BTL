@@ -1297,7 +1297,69 @@ footer .copyright
 .icon-content {
   padding-bottom: 20px;
 }
+#oderdt table{
+  border-collapse: collapse;
+}
+#odercart.section-p1 h2{
+  text-align: center;
+  text-decoration: dotted;
+  color: #080605;
+  font-weight: 500;
+}
+#odercart table{
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
 
+}
+#odercart table td{
+  margin-top: 20px;
+}
+#all {
+  border-bottom: 2px rgb(10, 195, 192) solid;
+  border-left:2px rgb(10, 195, 192) solid; 
+  border-right:2px rgb(10, 195, 192) solid; 
+}
+#odercart table tr:hover{
+  color: #fff !important;
+  background: linear-gradient(45deg, #b6670d, #0c96cc);
+}
+#odercart table img{
+  width: 70px;
+}
+#odercart table td:nth-child(1)
+{
+  font-size: 18px;
+}
+#odercart table td:nth-child(2)
+{
+
+  font-size: 18px;
+}
+#odercart table thead{
+  border: 1px solid rgb(223, 122, 122);
+  border-left: none;
+  border-right: none;
+  background-color: #065e58;
+  color: #f2eded;
+}
+#odercart table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px;
+}
+#odercart table tbody tr td
+{
+  padding-top: 15px;
+}
+#odercart table tbody td
+{
+  font-size: 20px;
+}
 @media screen and (max-width: 992px) {
   .icon-content {
       width: 50%;
