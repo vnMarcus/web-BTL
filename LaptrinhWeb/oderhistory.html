@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Electroshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+    <nav id="navbar_1">
+        <p>Welcome to Smart Electronic Store</p>
+        <i class="fas fa-map-marker-alt" style="color: #696969;"></i>
+        <a href="">Store Locator</a>
+        <i class="fas fa-truck " style="color: #696969;"></i>
+        <a href="">Track your Order</a>
+        <i class="far fa-shopping-bag" style="color: #696969;"></i>
+        <a href="">Shop</a>
+        <i class="fas fa-user" style="color: #696969;"></i>
+        <a href="">My Account</a>
+</nav>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#"><i class="fa fa-fw fa-home"></i>About</a>
+    <a href="#"><i class="fa fa-fw fa-shopping-cart"></i>Shop</a>
+    <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    <a href="manager.html"><i class="fa fa-fw fa-wrench"></i>Manage Product</a>
+</div>
+<section id="header">
+    <a  href="main.html"><img src="img/logo.png" class="logo" height="120" alt=""></a>
+        <ul id="navbar">
+            <li><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+            <li><a class="active" href="main.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>   
+            <li><a href="contact.html">Contact Us</a></li>
+            <div class="search">
+                <form action="#">
+                    <input type="text"
+                        placeholder=" Search"
+                        name="search">
+                    <button>
+                        <i class="fa fa-search"
+                            style="font-size: 18px;">
+                        </i>
+                    </button>
+                </form>
+            </div>
+            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Account
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">My account</a>
+                  <a href="#">Shop list</a>
+                  <a href="#">Log out</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+</section>
+<section id="Odertable" class="section-p1">
+        <h2 style="display: flex;">Oder History</h2>
+        <div id="adding">
+            <button class="Addst">Add Oder</button>
+        </div>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Oder ID</td>
+                    <td>Date</td>
+                    <td>User</td>
+                    <td>Price</td>
+                    <td>Status</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0000001</td>
+                    <td>02/03/2022</td>
+                    <td>Jhonxa</td>
+                    <td>499.00$</td>
+                    <td>Complete</td>
+                    <td><button id="remove"><i class="fal fa-window-close fa-sm"></i></button>
+						<button id="remove"><i class="fal fa-download fa-sm"></i></button></td>
+                </tr>
+                <tr>
+                    <td>0000001</td>
+                    <td>02/03/2022</td>
+                    <td>Jhonxa</td>
+                    <td>499.00$</td>
+                    <td>In Progress</td>
+                    <td><button id="remove"><i class="fal fa-window-close fa-sm"></i></button>
+						<button id="remove"><i class="fal fa-download fa-sm"></i></button></td>
+                </tr>
+                <tr>
+					<td>0000001</td>
+                    <td>02/03/2022</td>
+                    <td>Jhonxa</td>
+                    <td>499.00$</td>
+                    <td>Complete</td>
+                    <td><button id="remove"><i class="fal fa-window-close fa-sm"></i></button>
+						<button id="remove"><i class="fal fa-download fa-sm"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+<script src="script.js">
+</script>  
+
+</body>
+</html> 

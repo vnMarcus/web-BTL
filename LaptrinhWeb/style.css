@@ -641,7 +641,7 @@ footer .copyright
 .btn-page:hover,
 .prev:hover,    
 .next:hover,
-.active {
+.actives {
   color: #fff !important;
   background: linear-gradient(45deg, #4173ff, #ac60ff);
 }
@@ -934,19 +934,19 @@ footer .copyright
 }
 #cart table td:nth-child(1)
 {
-  width: 100px;
+  width: 10%;
   text-align: center;
   font-size: 18px;
 }
 #cart table td:nth-child(2)
 {
-  width: 150px;
+  width: 15%;
   text-align: center;
   font-size: 18px;
 }
 #cart table td:nth-child(3)
 {
-  width: 250px;
+  width: 25%;
   text-align: center;
   font-size: 18px;
 }
@@ -954,7 +954,7 @@ footer .copyright
 #cart table td:nth-child(5),
 #cart table td:nth-child(6)
 {
-  width: 150px;
+  width: 15%;
   text-align: center;
   font-size: 18px;
 }
@@ -966,6 +966,8 @@ footer .copyright
   border: 1px solid rgb(223, 122, 122);
   border-left: none;
   border-right: none;
+  background-color: #065e58;
+  color: #f2eded;
 }
 #cart table thead td{
   font-weight: 700;
@@ -1013,3 +1015,288 @@ footer .copyright
   padding: 10px;
   font-size: 18px;
 }
+/*Manager page*/
+#remove{
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+}
+#remove:hover{
+  color: #c53108;
+}
+#adding{
+  text-align: center;
+  display: flex;
+}
+#adding .Addst
+{
+  background-color: #1aac68;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#Usertable.section-p1 h2{
+  text-align: center;
+  text-decoration: dotted;
+  color: #080605;
+  font-weight: 500;
+}
+#Usertable table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+
+}
+#Usertable table tr{
+  border-bottom: 3px solid #eee7e7;
+}
+#Usertable table img{
+  width: 70px;
+}
+#Usertable table td:nth-child(1)
+{
+  width: 5%;
+  text-align: center;
+  font-size: 18px;
+}
+#Usertable table td:nth-child(2)
+{
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+}
+#Usertable table td:nth-child(3)
+{
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+}
+#Usertable table td:nth-child(4),
+#Usertable table td:nth-child(5)
+{
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+}
+#Usertable table td:nth-child(6),
+#Usertable table td:nth-child(7),
+#Usertable table td:nth-child(8)
+{
+  width: 5%;
+  text-align: center;
+  font-size: 18px;
+}
+#Usertable table thead{
+  border: 1px solid rgb(223, 122, 122);
+  border-left: none;
+  border-right: none;
+  background-color: #065e58;
+  color: #f2eded;
+}
+#Usertable table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px;
+}
+#Usertable table tbody tr td
+{
+  padding-top: 15px;
+}
+#Usertable table tbody td
+{
+  font-size: 15px;
+}
+/* Oder*/
+#Odertable.section-p1 h2{
+  text-align: center;
+  text-decoration: dotted;
+  color: #080605;
+  font-weight: 500;
+}
+#Odertable table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+
+}
+#Odertable table tr{
+  border-bottom: 3px solid #eee7e7;
+}
+#Odertable table img{
+  width: 70px;
+}
+#Odertable table td:nth-child(1)
+{
+  width: 5%;
+  text-align: center;
+  font-size: 18px;
+}
+#Odertable table td:nth-child(2)
+{
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+}
+#Odertable table td:nth-child(3)
+{
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+}
+#Odertable table td:nth-child(4),
+#Odertable table td:nth-child(5)
+{
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+}
+#Odertable table td:nth-child(6)
+{
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+}
+#Odertable table thead{
+  border: 1px solid rgb(223, 122, 122);
+  border-left: none;
+  border-right: none;
+  background-color: #065e58;
+  color: #f2eded;
+}
+#Odertable table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px;
+}
+#Odertable table tbody tr td
+{
+  padding-top: 15px;
+}
+#Odertable table tbody td
+{
+  font-size: 15px;
+}
+/*Oder track*/
+.card {
+  z-index: 0;
+  background-color: #eceff1;
+  padding-bottom: 20px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border-radius: 10px;
+}
+
+.top {
+  padding-top: 40px;
+  padding-left: 13% !important;
+  padding-right: 13% !important;
+}
+
+/* Icon progressbar */
+
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #455a64;
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 13px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+
+#progressbar .step0::before {
+  font-family: FontAwesome;
+  content: '\f10c';
+  color: #fff;
+}
+
+#progressbar li::before {
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  background: #c5cae9;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0;
+}
+
+/* Progressbar connector */
+#progressbar li::after {
+  content: '';
+  width: 100%;
+  height: 12px;
+  background-color: #c5cae9;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: -1;
+}
+
+#progressbar li:last-child::after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  left: -50%;
+}
+
+#progressbar li:nth-child(2)::after,
+#progressbar li:nth-child(3)::after {
+  left: -50%;
+}
+
+#progressbar li:first-child::after {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  left: 50%;
+}
+
+/* Color number of the step and the connect tor before it */
+
+#progressbar li.active::before,
+#progressbar li.active::after {
+  background-color: #651fff;
+}
+
+#progressbar li.active::before {
+  font-family: FontAwesome;
+  content: '\f00c';
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.icon-content {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .icon-content {
+      width: 50%;
+  }
+}
+
