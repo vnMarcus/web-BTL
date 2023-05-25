@@ -929,6 +929,10 @@ footer .copyright
 #cart table tr{
   border-bottom: 3px solid #eee7e7;
 }
+#cart table tr:hover{
+  color: #fff !important;
+  background: linear-gradient(45deg, #b6670d, #0c96cc);
+}
 #cart table img{
   width: 70px;
 }
