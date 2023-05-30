@@ -1,8 +1,0 @@
-INSERT INTO `test_db`.`payment_method`
-(`id`,
-`name`,
-`user_id`)
-VALUES
-(1, 'Credit Card', 1),
-(2, 'PayPal', 1),
-(3, 'Momo', 2);
