@@ -1,114 +1,142 @@
 package com.btl.code.dao;
 
-import com.btl.code.db.DBConnection;
-import com.btl.code.model.User;
-
-import java.nio.charset.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class UserDAO {
-    Connection conn = null;
-    ResultSet rs = null;
-    PreparedStatement ps = null;
+import com.btl.code.model.Category;
+import com.btl.code.model.User;
+import com.btl.code.util.HandleException;
+import com.btl.code.util.HashPassword;
+import com.btl.code.util.RandomString;
 
+public class UserDao {
+    public static void main(String[] args) throws ClassNotFoundException {
+//        User user = new UserDao().getUserByEmail("admin@example.com");
+//        System.out.println(user);
+//        new UserDao().addUser("admin@gmail.com","123456789","Vu","Hai","ROLE_ADMIN");
+//        new UserDao().updatePassword(1,"12345");
+        System.out.println(HashPassword.hashPassword("kfannwtann"));
+        new UserDao().updatePassword(32, HashPassword.hashPassword("kfannwtann"));
+    }
+    public List<User> getAllUser () {
+        List<User> userList = new ArrayList<>();
+        String SELECT_USERS_SQL = "SELECT * FROM user;";
 
-    public User login(String user, String pass){
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db?useSSL=false", "root", "");
+                Statement statement = connection.createStatement()) {
 
-        String query = "SELECT * FROM user where user_name = ? and password = ?;";
-        try {
-            conn = new DBConnection().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setString(1, user);
-            ps.setString(2, hashPassword(pass));
-            rs = ps.executeQuery();
-            while (rs.next()){
-                return new User(
-                        rs.getLong(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6),
-                        rs.getString(7)
-                );
-
+            ResultSet result = statement.executeQuery(SELECT_USERS_SQL);
+            while (result.next()) {
+                userList.add(new User(
+                        result.getInt(1),
+                        result.getString(2),
+                        result.getString(3),
+                        result.getString(4),
+                        result.getString(5),
+                        result.getString(6),
+                        result.getString(7)
+                        ));
             }
-        } catch (Exception e){
-
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
         }
-
-        return null;
+        return userList;
     }
 
-    public static String hashPassword(String password) {
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-            StringBuilder hexString = new StringBuilder();
-            for (byte b : hash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) hexString.append('0');
-                hexString.append(hex);
-            }
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
+    public User getUserByEmail(String email) throws ClassNotFoundException {
+        User user = null;
+        String QUERY_SQL = "SELECT * FROM user WHERE email = ?;";
+        Class.forName("com.mysql.jdbc.Driver");
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db", "root", "");
+                PreparedStatement statement = connection.prepareStatement(QUERY_SQL)) {
+
+            statement.setString(1, email);
+            ResultSet result = statement.executeQuery();
+            while(result.next()){
+                user = new User(
+                        result.getInt(1),
+                        result.getString(2),
+                        result.getString(3),
+                        result.getString(4),
+                        result.getString(5),
+                        result.getString(6),
+                        result.getString(7)
+                );}
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
+        }
+        return user;
+    }
+
+    public void addUser (String email,String password,String first_name,String last_name,String role) {
+        String INSERT_USERS_SQL = "INSERT INTO user(email,password,first_name,last_name,role) VALUES (?,?,?,?,?);";
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db?useSSL=false", "root", "");
+                PreparedStatement statement = connection.prepareStatement(INSERT_USERS_SQL)) {
+                statement.setString(1,email);
+                statement.setString(2,password);
+                statement.setString(3,first_name);
+                statement.setString(4,last_name);
+                statement.setString(5,role);
+                statement.executeUpdate();
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
+        }
+    }
+
+    public void deleteUser(Integer userId) {
+        String QUERY_SQL = "DELETE FROM user WHERE id=?;";
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db", "root", "");
+                PreparedStatement statement = connection.prepareStatement(QUERY_SQL)) {
+            statement.setInt(1,userId);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
+        }
+    }
+
+    public void updatePassword (Integer id,String password) {
+        String INSERT_PRODUCT_SQL = "UPDATE test_db.user SET password =? WHERE id=?;";
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db", "root", "");
+                PreparedStatement statement = connection.prepareStatement(INSERT_PRODUCT_SQL)) {
+            statement.setString(1, password);
+            statement.setInt(2,id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
+        }
+    }
+    public void updateName (Integer id,String fName, String lName) {
+        String INSERT_PRODUCT_SQL = "UPDATE test_db.user SET first_name = ?, last_name = ? WHERE id = ?;";
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/test_db", "root", "");
+             PreparedStatement statement = connection.prepareStatement(INSERT_PRODUCT_SQL)) {
+            statement.setString(1, fName);
+            statement.setString(2, lName);
+            statement.setInt(3, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            HandleException.printSQLException(e);
         }
     }
 
 
-    public boolean register(String user_name,String fullname,String password,String phone_number,String email,String address) {
-        String query = "INSERT INTO user (user_name, fullname, password, phone_number, email, address) VALUES (?, ?, ?, ?, ?, ?)";
-        try {
-            conn = new DBConnection().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setString(1, user_name);
-            ps.setString(2, fullname);
-            ps.setString(3, hashPassword(password));
-            ps.setString(4, phone_number);
-            ps.setString(5, email);
-            ps.setString(6, address);
-
-            int result = ps.executeUpdate();
-            return result > 0;
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
-        return false;
-    }
-
-    public boolean updatePassword(String email, String newpass){
-        // if get error add SET SQL_SAFE_UPDATES = 0 in your sql
-        String query = "update user set password = ? where email = ?;";
-        try {
-            conn = new DBConnection().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setString(1,hashPassword(newpass));
-            ps.setString(2, email);
-            int result = ps.executeUpdate();
-            return result > 0;
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        return false;
-    }
 
 
-    public static void main(String[] args) {
-        UserDAO userDAO = new UserDAO();
-//        userDAO.register("john.doe","John Doe","p@ssword1","1234567890","johndoe@example.com","123 Main St, Anytown USA");
-//        userDAO.register("jane.doe","Jane Doe","p@ssword2","0987654321","janedoe@example.com","456 Park Ave, Anytown USA");
-//        userDAO.register("bob.smith","Bob Smith","p@ssword3","5551234567","bobsmith@example.com","789 Elm St, Anytown USA");
-
-        String username = "john.doe";
-        String email = "vinhphieu098@gmail.com";
-
-        System.out.println(userDAO.updatePassword(email, "4779"));
-    }
 
 }

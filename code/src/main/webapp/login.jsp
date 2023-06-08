@@ -1,97 +1,134 @@
-<jsp:include page="common/taglib.jsp"></jsp:include>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%
+    Cookie[] cookies=request.getCookies();
+    String userName = "", password = "",rememberVal="";
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if(cookie.getName().equals("cookuser")) {
+                userName = cookie.getValue();
+            }
+            if(cookie.getName().equals("cookpass")){
+                password = cookie.getValue();
+            }
+            if(cookie.getName().equals("cookrem")){
+                rememberVal = cookie.getValue();
+            }
+        }
+    }
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>log_reg</title>
+    <link rel="stylesheet" href="css/log_reg.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toast_message.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-<div class="row wrapper no-gutters">
-
-    <div class="col l-6">
-        <div class="container">
-            <form id="auth-form" class="form" action="login" method="post">
-                <h3 class="auth-form__logo"><img src="img/logo.png" alt="cái logo smart store"></h3>
-                <h3 class="auth-form__heading">Sign in</h3>
-
-
-                <h1 style="color:red;"> ${requestScope.error}</h1>
-                <div class="auth-form__form">
-                    <div class="auth-form__group">
-                        <input type="text" value="${username}" rules = "required" name="name" id = "name" class="auth-form__input" placeholder="Email or phone number" required="required">
-                        <span class="form-message"></span>
+    <div class="wrap">
+    </div>
+    <%@ include file="header.jsp" %>
+    <div class="customer-login-form">
+        <div class="or-text">
+            <span>or</span>
+        </div>
+        <div class="column-set">
+            <div class="column1">
+                <form action="/login" method="post" class="loginform">
+                    <div class="login_title">
+                        <h1>Login</h1>
                     </div>
-
-                    <div class="auth-form__group">
-                        <input type="password"  value="${password}" name= "password" rules = "required|min:6" autocomplete="current-password" autocomplete="current-password"  id="id_password" class="auth-form__input" placeholder="Password" required="required">
-                        <i class="far fa-eye" id="togglePassword"></i>
-                        <span class="form-message"></span>
+                    <div class="welcome">
+                        <p>Welcome back! Sign in to your account.</p>
                     </div>
-
-                </div>
-
-                <button class="auth-form__btn-login mt-32" type="submit"> Login</button>
-
-
-                <div class="auth-form__aside mt-32">
-                    <div class="auth-form__keep-login">
-                        <input type="checkbox" name="remember" id="" value="1">
+                    <div class="username_or_email">
+                        <label for="username">Username or email address *</label>
+                        <input type="text" name="username" id="username" value="<%=userName%>">
+                    </div>
+                    <div class="password">
+                        <label for="password">Password *</label>
+                        <input type="password" name="password" id="password" value="<%=password%>">
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" name="remember" id="checkbox"
+                               value="1"
+                            <%= "1".equals(rememberVal.trim()) ? "checked=\"checked\"" : "" %>
+                        >
                         <span>Remember me</span>
                     </div>
-                    <div class="auth-form__forgot">
-                        <a href="forgot.jsp" class="">
-                            Forgot password?
-                        </a>
+                    <a href="" class="login">
+                        <button>Log in</button>
+                    </a>
+                    <a href="forgot.jsp" class="forgot">Forgot your password?</a>
+                </form>
+            </div>
+
+            <div class="column2">
+                <form action="/sign-up" class="registerform" method="post">
+                    <div class="register_title">
+                        <h1>Register</h1>
                     </div>
-                </div>
-
-                <div class="auth-form__other">
-                    <span class="auth-form__line"></span>
-                    <span>OR</span>
-                    <div class="auth-form__line"></div>
-                </div>
-
-                <div class="auth-form__socials">
-                    <i class="auth-form__socials-icon_gg fa-brands fa-google"></i>
-                    Sign in with Google
-                </div>
-
-                <div class="auth-form__socials">
-                    <i class="auth-form__socials-icon_fb fa-brands fa-square-facebook"></i>
-                    Sign in with Facebook
-                </div>
-
-                <div class="auth-form__register">
-                    Don't you have Account?
-                    <a href="register">Create new account</a>
-                </div>
-
-            </form>
+                    <div class="create_message">
+                        <p>Create new account today to reap the benefits of a personalized shopping experience.</p>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="email">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="email">
+                        <label for="last_name">Last name</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input type="password" id="pass" name="password">
+                    </div>
+                    <div class="password">
+                        <label for="re-password">Re-Password</label>
+                        <input type="password" id="re-password" name="re-password">
+                    </div>
+                    <div class="commit">
+                        <p>Your personal data will be protected in our privacy policy.</p>
+                    </div>
+                    <button type="submit" class="register_button" >Register</button>
+                </form>
+            </div>
         </div>
     </div>
-
-</div>
-
-<script>
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#id_password');
-
-    togglePassword.addEventListener('click', function (e) {
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
-        this.classList.toggle('fa-eye-slash');
-    });
-</script>
-
+    <%
+        String status = "";
+        if(request.getAttribute("status") != null) {
+            status = request.getAttribute("status").toString();
+        }
+    %>
+    <%@ include file="toast_message.jsp" %>
+    <%if(status.equals("1")) { %>
+    <script>
+        showalertdk()
+    </script>
+    <%}%>
+    <%if(status.equals("2")) { %>
+    <script>
+        showalerthdk()
+    </script>
+    <%}%>
+    <%if(status.equals("6")) { %>
+    <script>
+        showalertNotFoundEmail()
+    </script>
+    <%}%>
+    <%if(status.equals("7")) { %>
+    <script>
+        showalertResetPassword()
+    </script>
+    <%}%>
 </body>
 </html>

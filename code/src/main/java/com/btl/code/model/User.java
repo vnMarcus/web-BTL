@@ -1,95 +1,105 @@
 package com.btl.code.model;
 
-public class User {
-    private long id;
+import java.util.Objects;
 
-    private String user_name;
-    private String fullname;
-    private String password;
-    private String phone_number;
+public class User {
+
+    private int id;
 
     private String email;
-    private String address;
 
-    public User() {
-    }
+    private String password;
 
-    public User(Long id,String user_name, String fullname, String password, String phone_number, String email, String address) {
+    private String firstName;
+
+    private String lastName;
+
+    private String resetPasswordToken;
+
+    private String role;
+
+    public User(int id,
+                String email,
+                String password,
+                String firstName,
+                String lastName,
+                String resetPasswordToken,
+                String role) {
         this.id = id;
-        this.user_name = user_name;
-        this.fullname = fullname;
-        this.password = password;
-        this.phone_number = phone_number;
         this.email = email;
-        this.address = address;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.resetPasswordToken = resetPasswordToken;
+        this.role = role;
     }
 
-    public String getPhone_number() {
-        return phone_number;
-    }
-
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public int getId() {
+        return id;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getAddress() {
-        return address;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", user_name='" + user_name + '\'' +
-                ", fullname='" + fullname + '\'' +
-                ", password='" + password + '\'' +
-                ", phone_number='" + phone_number + '\'' +
                 ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", resetPasswordToken='" + resetPasswordToken + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
